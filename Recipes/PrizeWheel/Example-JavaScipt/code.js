@@ -145,6 +145,9 @@ function TryToSpinCallback(request, error)
 		var result = request.data;
 		console.log("Ticket Accepted! \nSPINNING...");
 		console.log("SPIN RESULT: "+ result.Items[1].DisplayName);
+
+		$("#prizeValue").text(result.Items[1].DisplayName);
+
 		GetInventory();
 	}
 }
